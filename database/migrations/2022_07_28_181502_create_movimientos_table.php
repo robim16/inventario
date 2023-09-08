@@ -20,6 +20,7 @@ class CreateMovimientosTable extends Migration
             $table->integer('inventario_anterior');
             $table->integer('inventario_nuevo');
             $table->timestamp('fecha');
+            $table->morphs('documentable');
             $table->unsignedBigInteger('inventario_id');
             $table->foreign('inventario_id')->references('id')->on('inventarios')->onDelete('cascade');
             $table->unsignedBigInteger('user_id');

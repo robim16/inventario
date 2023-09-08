@@ -23,6 +23,7 @@ class CreateReferenciasTable extends Migration
             $table->string('tamano');
             $table->float('peso');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

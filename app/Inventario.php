@@ -15,4 +15,15 @@ class Inventario extends Model
         'cantidad','referencia_id',
     ];
 
+
+    public function referencia()
+    {
+        return $this->belongsTo('App\Referencia');
+    }
+
+    public function movimientos()
+    {
+        return $this->hasMany('App\Movimiento');
+    }
+
 }

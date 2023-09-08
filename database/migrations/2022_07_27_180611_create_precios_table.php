@@ -15,7 +15,7 @@ class CreatePreciosTable extends Migration
     {
         Schema::create('precios', function (Blueprint $table) {
             $table->id();
-            $table->decimal(10, 2);
+            $table->decimal('precio', 10, 2);
             $table->unsignedBigInteger('referencia_id');
             $table->foreign('referencia_id')->references('id')->on('referencias')->onDelete('cascade');
             $table->timestamps();

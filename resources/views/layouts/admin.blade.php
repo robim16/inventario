@@ -857,7 +857,7 @@
   @include('partials.aside')
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div id="app" class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -879,7 +879,18 @@
     <!-- Main content -->
         <section class="content">
 
-            @yield('content')
+          @if(session('message'))
+
+            <div class="alert alert-{{ session('message')[0] }} alert-dismissible fade show" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+              <p>{{ session('message')[1] }}</p>
+            </div>
+
+          @endif
+
+          @yield('content')
         </section>
     <!-- /.content -->
   </div>
@@ -937,6 +948,7 @@
 
 @include('partials.scripts')
 
+@livewireScripts
 @stack('scripts')
 </body>
 </html>

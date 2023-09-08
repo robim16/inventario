@@ -1,13 +1,15 @@
 <!-- jQuery -->
 <script src="{{ asset('adminLte/plugins/jquery/jquery.min.js')}}"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="{{ asset('adminLte/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
+{{-- <script src="{{ asset('adminLte/plugins/jquery-ui/jquery-ui.min.js')}}"></script> --}}
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
+{{-- <script>
   $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
+</script> --}}
 <script src="{{ asset('adminLte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+{{-- <script src="{{ asset ('adminLte/plugins/daterangepicker/daterangepicker.js')}}"></script>
+<script src="{{ asset ('adminLte/plugins/summernote/summernote-bs4.min.js')}}"></script> --}}
+{{-- <!-- Bootstrap 4 -->
 <!-- ChartJS -->
 <script src="{{ asset('adminLte/plugins/chart.js/Chart.min.js')}}"></script>
 <!-- Sparkline -->
@@ -31,4 +33,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset ('adminLte/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ asset ('adminLte/dist/js/pages/dashboard.js')}}"></script>
+<script src="{{ asset ('adminLte/dist/js/pages/dashboard.js')}}"></script> --}}
+
+<script src="{{ asset('js/plugins.js') }}" defer></script>
+<script src="{{ asset('js/app.js') }}" defer></script>

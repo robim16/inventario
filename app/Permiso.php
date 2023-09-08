@@ -9,4 +9,15 @@ class Permiso extends Model
     protected $fillable = [
         'codigo','descripcion', 
     ];
+
+
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role');
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany('App\User');
+    }
 }

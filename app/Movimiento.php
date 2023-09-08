@@ -11,4 +11,14 @@ class Movimiento extends Model
         'cantidad', 'user_id', 'inventario_anterior',
         'inventario_nuevo', 'fecha'
     ];
+
+    public function inventario()
+    {
+        return $this->belongsTo('App\Inventario');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
